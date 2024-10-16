@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    
+    <style>
+        /* Main body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('img/bg.png'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contact form container */
+        .contact-form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(245, 163, 248, 0.7); /* Shadow effect */
+            max-width: 400px;
+            width: 100%;
+            text-align: center; /* Center the form content */
+        }
+
+        /* Form heading */
+        .contact-form h2 {
+            color: #ffffff;
+            font-size: 2em; /* Slightly smaller heading */
+            margin-bottom: 15px;
+        }
+        form{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        input, textarea{
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Input fields */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            background-color: rgba(31, 31, 31, 0.8);
+            border: 1px solid #941fc2;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1em;
+            
+        }
+
+        /* Textarea styling */
+        .contact-form textarea {
+            height: 80px; /* Slightly smaller height for textarea */
+            resize: none;
+        }
+
+        /* Submit button */
+        .contact-form button {
+            background-color: rgba(148, 31, 194, 0.9);
+            border: none;
+            color: #ffffff;
+            padding: 12px; /* Reduced padding */
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 35px;
+            cursor: pointer;
+            width: 20%;
+            margin-top: 10px; /* Spacing above the button */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .contact-form button:hover {
+            background-color: rgba(130, 111, 141, 0.9); /* Change color on hover */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 20px;
+            }
+
+            .contact-form h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="contactnumber" name="contactnumber" placeholder="Contact Number" required>
+            <textarea id="description" name="description" placeholder="Your message here..." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
