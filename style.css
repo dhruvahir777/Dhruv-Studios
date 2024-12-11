@@ -1,431 +1,339 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    height: auto;
-    background-image: url(bg.png); /* Background image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background image */
-    display: flex;
-    flex-direction: column; /* Column layout for navbar and main content */
-    align-items: center; /* Centering items */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-/* Navbar styling */
-.navbar {
-    width: 60%;
-    background-color: #a59e9e28; /* Same as button background */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centering the navbar */
     box-sizing: border-box;
-    border-radius: 35px;
-    margin-top: 25px;
-    z-index: 10; /* Ensure navbar is on top */
+    font-family: "Open Sans", sans-serif;
+
 }
 
-.navbar-logo {
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(90deg, #941fc2, #826f8d);
-    -webkit-background-clip: text;
-    color: transparent; /* Gradient text */
-}
-
-.navbar-links {
+section {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    gap: 20px;
-}
-
-.navbar-links a {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Lato Regular */
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    border: 3px solid transparent;
-    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    display: inline-block;
-    transition: background-color 0.3s;
 }
 
-.navbar-links a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 35px;
-    background: linear-gradient(90deg, #941fc2, #826f8d); /* Same gradient */
-    z-index: -1;
-    padding: 5px;
-    margin: -5px;
+.container {
+    width: 90%;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.21);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.7px);
+-webkit-backdrop-filter: blur(6.7px);
+border: 1px solid rgba(255, 255, 255, 0.795);
+    padding: 40px;
 }
 
-.navbar-links a:hover {
-    background-color: rgba(49, 3, 255, 0.1); /* Hover effect */
+
+.video-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: blur(6px);
+z-index: -1;
+position: fixed;
 }
 
-.hamburger {
-    display: none; /* Hide by default */
-    font-size: 24px; /* Size of the icon */
-    color: #fff; /* Icon color */
-    cursor: pointer; /* Pointer cursor on hover */
-}
 
-/* Main content: flex container */
-.content-container {
+
+.navbar {
     display: flex;
-    width: 80%;
-    height: auto;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px; /* Adjust as needed */
+    padding: 10px 20px;
+    background: linear-gradient(105deg, #7f408fc9, #bd4cff);
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    border: #ffffff   solid 1px;
+    
 }
 
-/* Video styling */
-.background-video {
-    width: 45%; /* Video on the left, adjust width */
-    height: auto;
-    animation: float 4s ease-in-out infinite; /* Animation for floating */
-}
-
-/* Up and down animation */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-60px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Text container for right side */
-.text-container {
-    width: 50%;
-    text-align: left;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-}
-
-.text-container h1 {
-    font-size: 5em;
-    font-weight: 700;
-    margin: 0;
-}
-
-.text-container h2 {
-    font-size: 2em;
-    font-weight: 300;
-    margin: 10px 0;
-}
-
-.text-container h3 {
-    font-size: 4em;
-    font-weight: 700;
-    margin: 0;
-}
-
-/* Logos section styling */
-.logos-section {
-    display: flex;
-    overflow: hidden; /* Hide overflow for scrolling effect */
-    width: 100%; /* Full width */
-    background: rgba(0, 0, 0, 0); /* Optional background */
-    position: relative; /* For positioning */
-}
-
-.logos-container {
-    display: flex;
-    animation: scroll 20s linear infinite; /* Animation for scrolling */
-}
-
-/* Individual logos */
-.logo {
-    margin: 15px; /* Space between logos */
-    width: 120px; /* Width of each logo */
-    height: auto; /* Auto height to maintain aspect ratio */
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%); /* Start off screen */
-    }
-    100% {
-        transform: translateX(-100%); /* Scroll to the left */
-    }
-}
-
-/* Services Section */
-.services-section {
-    width: 80%;
-    margin-top: 50px; /* Space above services section */
-    text-align: center; /* Center align the heading */
-}
-
-.services-section h2 {
-    font-size: 2.5em; /* Heading size */
-    color: #ffffff; /* Text color */
-    margin-bottom: 20px; /* Space below heading */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap; /* Wrap to next line if space is not enough */
-    justify-content: center; /* Center the items */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.navbar a {
+    text-decoration: none;
     color: #ffffff;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.logo video {
+    width: 50px;
+    border-radius: 50%;
+    border: #ffffff   solid 2px;
+}
+
+.navbar a:hover {
+    color: #9f7aea;
+}
+
+.navbar .login {
+    background: #444;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #d3d3d3;
+    font-size: 16px;
+    cursor: pointer;
+    border: #ffffff   solid 1px;
+    transition: background 0.3s;
+}
+
+.navbar .login:hover {
+    background: #6b46c1;
+}
+
+.main-content {
+    margin-top: 130px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.main-content h1 span {
+    color: #7120b3;
+}
+
+.main-content p {
+    font-size: 24px;
+    font-style: italic;
+    color: #352d81;
+    margin-bottom: 40px;
     font-weight: bold;
+    transition: all 0.5s;
+}
+
+.main-content p:hover {
+    
+color: #000000;
+}
+.explore-btn {
+    display: inline-block;
+    background: none;
+    border: 2px solid #9f7aea;
+    color: #9f7aea;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+   margin-right: 350px;
+}
+
+
+.explore-btn:hover {
+    background: #9f7aea;
+    color: #fff;
+    border: #ffffff solid 2px;
+}
+
+
+
+.explore-btn span {
+    margin-left: 10px;
+}
+
+/* New Sections */
+.software-tools {
+    margin-top: 90px 30ox;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: rgba(197, 197, 197, 0.151);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 0.1px solid rgba(255, 255, 255, 0.795)
+}
+
+.software-tools h2 {
+    font-size: 36px;
+    color: #fcf7ff;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.software-tools .tool-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: #ffffff44;
+    border: #ffffff   solid 1px;
+    padding: 10px;
+    border-radius: 30PX;
+    width: 80%;
+ 
+ 
+    
+}
+
+.software-tools .tool-icons img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+}
+.software-tools .tool-icons img:hover {
+    transform: scale(1.3) rotate(10deg);
+
+   
+
+}
+
+
+
+
+.thumbnails {
+    height: auto;
+    width: full;
+    display: grid; /* Enables grid layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+    padding: 30px;
+    display: flex;
+    justify-content: cente;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.171);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(255, 255, 255, 0.795)
     
    
-  
 }
 
-.service {
-    background-color: rgba(31, 31, 31, 0.911); /* Light background */
-    border-radius: 36px; /* Rounded corners */
-    margin: 10px; /* Margin between services */
-    padding: 1px; /* Padding inside service box */
-    text-align: center; /* Center text in service box */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
-    width: 200px; /* Fixed width for service box */
-    border: 2px solid #941fc2; /* Border color and size */
-   
-}
-
-
-
-.service:hover {
-    box-shadow: 0 0 15px rgba(245, 163, 248, 0.7); /* Glow effect on hover */
-}
-
-/* Mobile view: display 2 services per row */
-@media (max-width: 768px) {
-    .services-container {
-        display: grid; /* Use grid for easier control */
-        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-        gap: 20px; /* Space between service items */
-    }
-
-    .service {
-        width: 100%; /* Full width for mobile */
-    }
-}
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        width: 90%; /* Adjust navbar width for smaller screens */
-        padding: 10px; /* Reduce padding */
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .navbar-links {
-        display: none; /* Hide links by default */
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Full width */
-        background-color: rgba(165, 158, 158, 0.9); /* Background color for dropdown */
-        position: absolute; /* Position absolute for dropdown */
-        top: 60px; /* Position below the navbar */
-        left: 0; /* Align to left */
-        border-radius: 0 0 35px 35px; /* Rounded bottom corners */
-        z-index: 9; /* Ensure it sits on top */
-    }
-
-    .navbar-links a {
-        padding: 15px; /* Increased padding for clickable area */
-        text-align: center; /* Center text in links */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider line between links */
-    }
-
-    .navbar-links.show {
-        display: flex; /* Show links when toggled */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon on mobile */
-    }
-
-    .content-container {
-        flex-direction: column; /* Stack video and text vertically */
-        align-items: center; /* Center align items */
-        width: 100%; /* Full width */
-    }
-
-    .background-video {
-        width: 100%; /* Full width for video */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .text-container {
-        width: 90%; /* Reduce width for text */
-        text-align: center; /* Center text */
-        margin-top: 20px; /* Space above text */
-    }
-}
-
-
-.clients-section {
-    text-align: center; /* Center the text */
-    margin-top: 50px; /* Space above section */
-    color: #ffffff; /* Text color */
-}
-
-.clients-section h2 {
-    font-size: 2.5em; /* Heading size */
-    color: #ffffff; /* Heading color */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-
-
-
-/* Desktop view - 5 logos per row */
-.clients-container {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-    gap: 40px; /* Space between each client */
-    justify-items: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
-    margin: 0 auto; /* Center the entire container */
-}
-
-/* Mobile view - 2 logos per row */
-@media (max-width: 768px) {
-    .clients-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 equal columns on mobile */
-        gap: 30px; /* Adjusted space between clients for smaller screens */
-    }
-}
-
-.client {
-    text-align: center; /* Center text */
-    width: 150px; /* Width for each client */
-    height: 180px; /* Height for consistent spacing */
-    display: flex; /* Flexbox for aligning content */
-    flex-direction: column; /* Stack logo and name */
-    align-items: center; /* Center content horizontally */
-    justify-content: space-between; /* Space between logo and name */
-}
-
-.client-logo {
-    width: 100px; /* Width for logos */
-    height: 100px; /* Height for logos */
-    border-radius: 50%; /* Circular logos */
-    object-fit: cover; /* Cover the image area */
-    border: 2px solid #941fc2; /* Border around logos */
-}
-
-.client p {
-    margin-top: 10px; /* Space above channel name */
-    font-weight: bold; /* Bold channel names */
-    color: #ffffff; /* Text color */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis for long text */
-    width: 100%; /* Limit width to prevent overflow */
-    text-align: center; /* Center the text */
-    max-width: 120px; /* Optional: Max width for names */
-}    /* Compact Footer styling */
-.footer {
-    background: linear-gradient(135deg, #000000, #4e2781); /* Gradient background */
-    padding: 15px 20px; /* Reduced padding for compactness */
+.thumb-child {
+    width: 300px;
+    height: auto;
+    background: linear-gradient(105deg, #7f408f52, #410e5f96);
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.9em; /* Smaller font size for compactness */
-    width: 100%; /* Full width */
+    border: #ffffff   solid 1px;
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    transition: all 0.5s;
 }
 
-/* Footer title styling */
-.footer h3 {
-    font-size: 1.5em; /* Smaller font size */
-    margin: 0; /* Remove margin */
-    font-weight: 700;
-    letter-spacing: 1px;
+.thumb-child img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 4px solid #c5cbff;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+.thumb-child h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: start;
+    transition: all 0.5s;
+}
+.thumb-child p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: start;
+    transition: all 0.5s;
+    border-bottom: #9959ff2f  solid 1px;
+}
+.thumb-child .thumb-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(105deg, #7f408f52, #410e5f96);  
+    outline: none;
+    border: none;
+    border: 2px solid #ffffff;
+    transition: all 0.5s;
+    
+}
+.thumbnails :hover {
+    transform: scale(1.1);
 }
 
-/* Social media icons styling */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Reduced gap */
-    margin: 10px 0; /* Reduced margin */
-}
+        /* Pricing Heading */
+        .pricing-heading {
+            margin: 30px;
+            font-size: 34px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+           
+        }
 
-/* Styling individual icons */
-.social-icons a {
-    display: inline-block;
-    width: 35px; /* Smaller icon size */
-    height: 35px; /* Smaller icon size */
-    background-color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #941fc2;
-    font-size: 1em; /* Smaller font size */
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
+        /* Pricing Container */
+        .pricing-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            padding: 40px;
+            background-color: #ffffff54;
+            border: #ffffff solid 1px;
+            border-radius: 16px;
+            backdrop-filter: blur(9.7px);
+        }
 
-/* Hover effects on icons */
-.social-icons a:hover {
-    transform: translateY(-2px); /* Reduced floating effect */
-    background-color: #ffffff;
-    color: #550d8a; /* Darker purple on hover */
-}
+        /* Individual Plan Box */
+        .plan-box {
+            background-color: #ffffff65;
+            border: 2px solid #352d81;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            width: 300px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease, border-radius 0.5s ease;
+        }
 
-/* Contact details in a single line */
-.footer .details {
-    margin-top: 5px; /* Reduced margin */
-    display: flex; /* Flex layout for inline */
-    justify-content: center; /* Centering the content */
-    gap: 30px; /* Space between items */
-    line-height: 1.5; /* Line height for readability */
-    font-size: 0.8em; /* Smaller font size */
-}
+        /* Hover Effect */
+        .plan-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(53, 45, 129, 0.4);
+            border-radius: 0px 50px 0px 50px;
+        }
 
-/* Link hover effect for email */
-.footer .details a {
-    color: #ffffff;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s ease;
-}
+        /* Plan Title */
+        .plan-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #352d81;
+            margin-bottom: 10px;
+        }
 
-.footer .details a:hover {
-    border-bottom: 2px solid #941fc2;
-}
+        /* Plan Price */
+        .plan-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #6a5acd;
+            margin-bottom: 10px;
+        }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .footer h3 {
-        font-size: 1.3em; /* Further reduce for smaller screens */
-    }
-
-    .social-icons a {
-        width: 30px; /* Smaller icon size */
-        height: 30px; /* Smaller icon size */
-        font-size: 0.9em; /* Smaller font size */
-    }
-
-    .footer .details {
-        font-size: 0.7em; /* Smaller font size */
-    }
-}
+        /* Plan Description */
+        .plan-desc {
+            font-size: 14px;
+            color: #666;
+        }
