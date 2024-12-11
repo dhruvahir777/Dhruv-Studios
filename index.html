@@ -3,159 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv Studios</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Google Fonts: Lato -->
+    <title>Dhruv Studios - Graphic Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="emoji-container" id="emojiContainer"></div>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar-logo lato-bold">DS</div>
-        <div class="navbar-links" id="navbar-links">
-            <a href="https://dhruvahir777.github.io/dflix/" class="lato-regular">Dflix</a>
-            <a href="https://dhruvahir777.github.io/emojis/icon.html" class="lato-regular">3D-imojis</a>
-            <a href="contect.html" class="lato-regular">Contact</a>
+    <section class="hero">
+        <video class="video-background" autoplay loop muted>
+            <source src="v1.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+       <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="img/Wow-[remix].mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+            </div>
+            <button class="login">Login</button>
         </div>
-        <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
-        </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="content-container">
-        <video class="background-video" src="media/v.webm" autoplay muted loop></video>
-        <div class="text-container">
+        <div class="main-content">
             <h1>Dhruv Studios</h1>
-            <h2>Start Your Design Journey</h2>
-            <h3>With DS live </h3>
-        </div>
-    </div>
+            <h1>Where <span>Imagination</span> Meets <span>Innovation</span></h1>
+            <p>"Your Story, Our Design"</p>
+            <a  href="#" class="explore-btn">Contect us <span><i class="fa fa-phone" style="font-size:21px;"></i></span>  </a>
+          
+       </div>
+    </section>
 
-    <!-- Logos Section -->
-    <div class="logos-section">
-        <div class="logos-container">
-            <img src="clogo/65cc2d341ad4630283a89578b24366750572333d-107x56.svg" alt="Logo 1" class="logo">
-            <img src="clogo/7f5552bd38bd76c017dea2fdd33a7d4d52033f0d-122x56.svg" alt="Logo 2" class="logo">
-            <img src="clogo/98f26cfe965399172506d8232e7fd4df7ba58e99-210x56 (1).svg" alt="Logo 3" class="logo">
-            <img src="clogo/98f26cfe965399172506d8232e7fd4df7ba58e99-210x56 (2).svg" alt="Logo 4" class="logo">
-            <img src="clogo/98f26cfe965399172506d8232e7fd4df7ba58e99-210x56 (1).svg" alt="Logo 5" class="logo">
-        </div>
-    </div>
+    <!-- <div class="container"> -->
+        <!-- Navbar -->
+        
 
-    <!-- Services Section -->
-    <div class="services-section">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service">
-                <p>Thumbnail Design</p>
+        <div class="software-tools">
+            <h2>Tools We Use</h2>
+            <div class="tool-icons">
+                <img src="img/ps.png" alt="Photoshop">
+                <img src="img/figma.png" alt="Illustrator">
+                <img src="img/canva.webp" alt="Figma">
+                <img src="img/xd.png" alt="Adobe XD">
+                <img src="img/ppro.png" alt="Premiere Pro">
             </div>
-            <div class="service">
-                <p>Poster Design</p>
-            </div>
-            <div class="service"> 
-                <p>Banner Design</p>
-            </div>
-            <div class="service">        
-                <p>Wedding Card Design</p>
-            </div>
-            <div class="service">          
-                <p>Social Media Posts</p>
-            </div>
-            <div class="service">
-                <p>Festival Post Design</p>
-            </div>
-            <div class="service">
-                <p>VIP Graphics</p>
-            </div>
-        </div>
-    </div>
-    
+        </div> 
 
-    <div class="clients-section">
-        <h2>Our Clients</h2>
      
-        <div class="clients-container">
-            <div class="client">
-                <img src="img/dhruv.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Mr.Dhruv Ahir</p>
+        <!-- Thumbnails Section -->
+        <h1 class="pricing-heading">Our Services</h1>
+        <div class="thumbnails">
+           
+            <div class="thumb-child">
+                <img src="img/dsUI.png" alt="Design 1">
+                <h4>UI/UX Design</h4>
+                <p>"Creative and user-centric UI/UX designs tailored to enhance usability and deliver an exceptional user experience."
+                </p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c2.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>For Design</p>
+            <div class="thumb-child">
+                <img src="img/banners.png" alt="Design 2">
+                <h4>Banner Design</h4>
+                <p>"Eye-catching and professionally crafted banners to effectively convey your message and boost engagement."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c3.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Smokzzz PLY</p>
+            <div class="thumb-child">
+                <img src="img/logo.jpeg" alt="Design 3">
+                <h4>Logo Design</h4>
+                <p>"Unique and memorable logo designs that represent your brand identity and make a lasting impression."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c4.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Yellow Fox YT</p>
+            <div class="thumb-child">
+                <img src="img/thumbnail.jpg" alt="Design 1">
+                <h4>Thumbnail Design</h4>
+                <p>"Attractive and click-worthy thumbnails designed to maximize viewer interest and engagement for your content."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c5.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Podcast caP</p>
+            <div class="thumb-child">
+                <img src="img/peket.jpg" alt="Design 2">
+                <h4>Packet Design</h4>
+                <p>"Innovative and visually appealing packet designs that make your product stand out on the shelves.".</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c6.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Rao Shaheb 18</p>
+            <div class="thumb-child">
+                <img src="img/event.png" alt="Design 3">
+                <h4>Event-Poster Design</h4>
+                <p>"Vibrant and impactful event posters to capture attention and effectively promote your special occasions."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c7.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Sandip_Joshi_Show</p>
+            <div class="thumb-child">
+                <img src="img/bd2.jpg" alt="Design 1">
+                <h4>Birthday Poster</h4>
+                <p>"Beautiful and personalized birthday posters to add a touch of joy and creativity to your celebrations."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c8.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Spotlight Gujarati</p>
+            <div class="thumb-child">
+                <img src="img/resume.jpg" alt="Design 1">
+                <h4>Resume/CV Design</h4>
+                <p>"Professionally designed resumes to help you stand out and make an impactful impression."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-            <div class="client">
-                <img src="img/c9.jpg" alt="Channel 1 Logo" class="client-logo">
-                <p>Rockysp1</p>
+            <div class="thumb-child">
+                <img src="img/ts.png" alt="Design 1">
+                <h4>T-shirt Design</h4>
+                <p>"Beautiful and personalized birthday posters to add a touch of joy and creativity to your celebrations."</p>
+                <button class="thumb-btn">More Info</button>
             </div>
-        </div>
+        </div> 
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <h3>Dhruv Studios</h3>
-
-        <!-- Social media links -->
-        <div class="social-icons">
-            <a href="https://www.instagram.com/" target="_blank">
-                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-                <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-                <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
-            </a>
-        </div>
-
-        <!-- Divider line -->
-        <div class="divider"></div>
-
-        <!-- Contact details -->
-        <div class="details">
-            <p>Location: Jamnagar - Dwarka, Gujarat</p>
-            <p>Contact: +91 709100857</p>
-            <p>Email: <a href="mailto:incnogeto@gmail.com">incnogeto@gmail.com</a></p>
-        </div>
-    </div>
-
-    <!-- Font Awesome CDN for social media icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+      <!-- Heading Outside Pricing Container -->
+      <h1 class="pricing-heading">Our Pricing</h1>
+    
+      <!-- Pricing Boxes -->
+      <div class="pricing-container">
+          <div class="plan-box">
+              <div class="plan-title">Monthly</div>
+              <div class="plan-price">$300 / Month</div>
+              <div class="plan-desc">Perfect for short-term projects.</div>
+          </div>
+          <div class="plan-box">
+              <div class="plan-title">Yearly</div>
+              <div class="plan-price">$1000 / Year</div>
+              <div class="plan-desc">Best for long-term engagements.</div>
+          </div>
+          <div class="plan-box">
+              <div class="plan-title">Custom</div>
+              <div class="plan-price">$20 / Project</div>
+              <div class="plan-desc">Flexible pricing per project.</div>
+          </div>
+      </div>
+    
 </body>
-
 </html>
