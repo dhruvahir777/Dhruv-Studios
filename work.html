@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Gallery</title>
+    <style>
+        :root {
+  --background-color: #f2f2f7;
+  --text-color: #1c1c1e;
+  --card-background: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.6rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  background-color: rgb(207, 207, 207);
+  border-radius: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: .9rem;
+}
+
+.gallery-item {
+  position: relative;
+  background-color: var(--card-background);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  
+
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.329);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  pointer-events: none; /* To prevent interaction */
+  z-index: 1; /* Keeps gradient below the text */
+}
+
+.gallery-item .date-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0); /* Semi-transparent background for better contrast */
+  padding: 5px 10px;
+  border-radius: 12px;
+  z-index: 2; /* Ensures overlay text is above the gradient */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Work Gallery</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="./img/img1.jpg" alt="Image 1">
+                <div class="date-overlay">Sunday, 18 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img2.jpg" alt="Image 2">
+                <div class="date-overlay">Monday, 19 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img3.jpg" alt="Image 3">
+                <div class="date-overlay">Tuesday, 20 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img4.jpg" alt="Image 4">
+                <div class="date-overlay">Wednesday, 21 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img5.jpg" alt="Image 5">
+                <div class="date-overlay">Thursday, 22 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img6.jpg" alt="Image 6">
+                <div class="date-overlay">Friday, 23 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img7.jpg" alt="Image 2">
+                <div class="date-overlay">Monday, 19 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img8.jpg" alt="Image 3">
+                <div class="date-overlay">Tuesday, 20 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img9.jpg" alt="Image 4">
+                <div class="date-overlay">Wednesday, 21 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img10.jpg" alt="Image 5">
+                <div class="date-overlay">Thursday, 22 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img11.jpg" alt="Image 6">
+                <div class="date-overlay">Friday, 23 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img12.jpg" alt="Image 6">
+                <div class="date-overlay">Friday, 23 Jan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/img13.jpg" alt="Image 6">
+                <div class="date-overlay">Friday, 23 Jan</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
